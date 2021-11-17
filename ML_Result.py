@@ -59,8 +59,8 @@ sns.heatmap(data_corr, cmap = 'copper')
 
 #XGBoost
 
-X_train,X_test,y_train,y_test= train_test_split(x_new,y_new,test_size=0.2,random_state=42)
-hybridXGB=XGBClassifier(max_depth=10,subsample=1,n_estimators=250,learning_rate=0.05)
+X_train,X_test,y_train,y_test= train_test_split(x_new,y_new,test_size=,random_state=)
+hybridXGB=XGBClassifier(max_depth=,subsample=,n_estimators=,learning_rate=)
 start = time.time()
 hybridXGB.fit(X_train,y_train)
 stop = time.time()
@@ -70,9 +70,9 @@ x_new_MLP['predict']=hybridPredit
 
 #MLP
 
-X_trainMLP,X_testMLP,y_trainMLP,y_testMLP= train_test_split(x_new_MLP,y_new,test_size=0.2,random_state=1)
-hybridMLP=MLPClassifier(solver='lbfgs', alpha=1e-5,
-                      hidden_layer_sizes=(45,25), random_state=15,max_iter=5000000,max_fun=1500000,activation='relu')
+X_trainMLP,X_testMLP,y_trainMLP,y_testMLP= train_test_split(x_new_MLP,y_new,test_size=,random_state=)
+hybridMLP=MLPClassifier(solver=, alpha=,
+                      hidden_layer_sizes=, random_state=,max_iter=,max_fun=,activation=)
 
 
 start = time.time()
